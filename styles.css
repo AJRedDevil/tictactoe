@@ -21,6 +21,7 @@ h1 {
 
 /* Controls */
 #messageBox {
+  margin: 8px 0px 8px 0px;
   padding: 2px;
   text-align: center;
   color: var(--foreground-color);
