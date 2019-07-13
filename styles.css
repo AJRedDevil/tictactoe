@@ -79,3 +79,30 @@ h1 {
   border-top: 7px solid var(--foreground-color);
   border-bottom: 1px solid var(--foreground-color);
 }
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #666;
+  background-color: var(--foreground-color);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px #999;
+  margin-top: 6px;
+}
+
+.button:hover {
+  background-color: rgb(224, 224, 139);
+}
+
+.button-active {
+  background-color: rgb(224, 224, 139);
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
