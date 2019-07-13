@@ -3,6 +3,7 @@ body {
 }
 
 main {
+  max-width: 32rem;
   padding: 2rem;
   margin: auto;
 }
@@ -10,4 +11,26 @@ main {
 h1 {
   text-align: center;
   color: rgb(255, 255, 153);
+}
+
+#messageBox {
+  padding: 2px;
+  text-align: center;
+  color: rgb(255, 255, 153);
+  border: 2px solid rgb(255, 255, 153);
+  border-radius: 8px;
+}
+
+#difficulty {
+  height: 45px;
+  width: 140px;
+  border-radius: 8px;
+  font-size: 24px;
+  background-color: rgb(255, 255, 153);
+  color: #666;
+  padding-left: 20px;
+}
+
+.controls {
+  text-align: center;
 }
