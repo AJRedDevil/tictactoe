@@ -101,7 +101,7 @@ h1 {
   background-color: rgb(224, 224, 139);
 }
 
-.button-active {
+.button:active {
   background-color: rgb(224, 224, 139);
   box-shadow: 0 2px #666;
   transform: translateY(4px);
