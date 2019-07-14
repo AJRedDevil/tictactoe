@@ -122,3 +122,7 @@ const chooseSquare = event => {
     }
   }
 };
+
+for (let i = 0; i < squares.length; i++) {
+  squares[i].addEventListener('click', chooseSquare, false);
+}
