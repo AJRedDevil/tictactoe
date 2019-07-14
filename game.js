@@ -43,7 +43,7 @@ const findClaimedSquares = marker => {
 
 const checkForWinCondition = marker => {
   const claimedSquares = findClaimedSquares(marker);
-  const win = false;
+  let win = false;
   for (let i = 0; i < winConditions.length; i++) {
     win = winConditions[i].every(
       element => claimedSquares.indexOf(element) > -1
@@ -78,7 +78,7 @@ const squareIsOpen = square =>
   square.innerHTML !== 'X' && square.innerHTML !== 'O';
 
 const checkForDraw = () => {
-  const draw = true;
+  let draw = true;
   for (let id = 0; id < squareCount; id++) {
     if (squareIsOpen(document.getElementByIdid)) {
       draw = false;
