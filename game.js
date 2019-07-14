@@ -80,14 +80,43 @@ const makeMoveAtFirstAvailableSquare = () => {
   for (let id = 0; id < squareCount; id++) {
     square = document.getElementById(id);
     if (squareIsOpen(square)) {
-      squareCount.innerHTML = 'O';
+      square.innerHTML = 'O';
       break;
     }
   }
 };
 
-const secureWin = () => {};
-const preventDefeat = () => {};
+const secureWin = () => makeMove('O');
+
+const preventDefeat = () => makeMove('X');
+
+const makeMove = marker => {
+  let moveMade = fase;
+  for (let i = 0; i < winConditions.length; i++) {
+    let count = 0;
+    winConditions[i].forEach(id => {
+      if (marker === document.getElementById(id).innerHTML) {
+        count++;
+      }
+		});
+		
+		if (count == 2) {
+			winConditions[i].forEach(id => {
+				const square = document.getElementById(id)
+				if (squareIsOpen(square)) {
+					square.innerHTML = "O";
+					moveMade = true;
+					break;
+				}
+			});
+		}
+
+		if (moveMade) {
+			break;
+		}
+  }
+  return moveMade;
+};
 
 const squareIsOpen = square =>
   square.innerHTML !== 'X' && square.innerHTML !== 'O';
