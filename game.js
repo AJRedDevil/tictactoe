@@ -19,7 +19,32 @@ const setMessageBox = caption => {
   messageBox.innerHTML = caption;
 };
 
-const checkForWinCondition = marker => {};
+const findClaimedSquares = marker => {
+  const claimedSquares = [];
+  let value;
+  for (let id = 0; id < squareCount; id++) {
+    value = document.getElementById(id).innerHTML;
+    if (value == marker) {
+      claimedSquares.push(id);
+    }
+  }
+  return claimedSquares;
+};
+
+const checkForWinCondition = marker => {
+  const claimedSquares = findClaimedSquares(marker);
+  const win = false;
+  for (let i = 0; i < winConditions.length; i++) {
+    win = winConditions[i].every(
+      element => claimedSquares.indexOf(element) > -1
+    );
+    if (win) {
+      win = winConditions[i];
+      break;
+    }
+  }
+  return win;
+};
 
 const opponentMove = () => {};
 
