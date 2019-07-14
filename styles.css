@@ -48,6 +48,7 @@ h1 {
   display: inline-block;
   width: 10em;
   height: 75px;
+  vertical-align: top;
   text-align: center;
   margin: 0;
   padding: 0;
