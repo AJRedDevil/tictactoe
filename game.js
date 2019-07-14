@@ -56,7 +56,23 @@ const checkForWinCondition = marker => {
   return win;
 };
 
-const opponentMove = () => {};
+// AI
+const opponentMove = () => {
+  if (difficulty === 'beginner') {
+    makeMoveAtFirstAvailableSquare();
+  } else {
+  }
+};
+
+const makeMoveAtFirstAvailableSquare = () => {
+  for (let id = 0; id < squareCount; id++) {
+    square = document.getElementById(id);
+    if (squareIsOpen(square)) {
+      squareCount.innerHTML = 'O';
+      break;
+    }
+  }
+};
 
 const squareIsOpen = square =>
   square.innerHTML !== 'X' && square.innerHTML !== 'O';
