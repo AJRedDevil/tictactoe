@@ -129,7 +129,7 @@ const chooseSquare = event => {
           }
         } else {
           gameOver = true;
-          highlightWinningSquares(lost, 'rgb(42,178,72)');
+          highlightWinningSquares(lost, 'rgb(229,55,55)');
           setMessageBox('You lost!');
         }
       } else {
