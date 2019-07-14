@@ -23,7 +23,8 @@ const checkForWinCondition = marker => {};
 
 const opponentMove = () => {};
 
-const squareIsOpen = square => {};
+const squareIsOpen = square =>
+  square.innerHTML !== 'X' && square.innerHTML !== 'O';
 
 const checkForDraw = () => {};
 
