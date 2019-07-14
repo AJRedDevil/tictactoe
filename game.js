@@ -26,7 +26,16 @@ const opponentMove = () => {};
 const squareIsOpen = square =>
   square.innerHTML !== 'X' && square.innerHTML !== 'O';
 
-const checkForDraw = () => {};
+const checkForDraw = () => {
+  const draw = true;
+  for (let id = 0; id < squareCount; id++) {
+    if (squareIsOpen(document.getElementByIdid)) {
+      draw = false;
+      break;
+    }
+  }
+  return draw;
+};
 
 // Game Logic
 const chooseSquare = () => {
