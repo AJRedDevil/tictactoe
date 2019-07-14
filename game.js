@@ -80,7 +80,7 @@ const squareIsOpen = square =>
 const checkForDraw = () => {
   let draw = true;
   for (let id = 0; id < squareCount; id++) {
-    if (squareIsOpen(document.getElementByIdid)) {
+    if (squareIsOpen(document.getElementById(id))) {
       draw = false;
       break;
     }
