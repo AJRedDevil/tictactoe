@@ -61,6 +61,18 @@ const opponentMove = () => {
   if (difficulty === 'beginner') {
     makeMoveAtFirstAvailableSquare();
   } else {
+    let moveMade = secureWin();
+    if (!moveMade) {
+      moveMade = preventDefeat();
+      if (!moveMade) {
+        const center = document.getElementById(4);
+        if (squareIsOpen(center)) {
+          center.innerHTML = 'O';
+        } else {
+          makeMoveAtFirstAvailableSquare();
+        }
+      }
+    }
   }
 };
 
@@ -73,6 +85,9 @@ const makeMoveAtFirstAvailableSquare = () => {
     }
   }
 };
+
+const secureWin = () => {};
+const preventDefeat = () => {};
 
 const squareIsOpen = square =>
   square.innerHTML !== 'X' && square.innerHTML !== 'O';
