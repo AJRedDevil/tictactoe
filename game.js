@@ -91,29 +91,29 @@ const secureWin = () => makeMove('O');
 const preventDefeat = () => makeMove('X');
 
 const makeMove = marker => {
-  let moveMade = fase;
+  let moveMade = false;
   for (let i = 0; i < winConditions.length; i++) {
     let count = 0;
     winConditions[i].forEach(id => {
       if (marker === document.getElementById(id).innerHTML) {
         count++;
       }
-		});
-		
-		if (count == 2) {
-			winConditions[i].forEach(id => {
-				const square = document.getElementById(id)
-				if (squareIsOpen(square)) {
-					square.innerHTML = "O";
-					moveMade = true;
-					break;
-				}
-			});
-		}
+    });
 
-		if (moveMade) {
-			break;
-		}
+    if (count == 2) {
+      winConditions[i].some(id => {
+        const square = document.getElementById(id);
+        if (squareIsOpen(square)) {
+          square.innerHTML = 'O';
+          moveMade = true;
+          return;
+        }
+      });
+    }
+
+    if (moveMade) {
+      break;
+    }
   }
   return moveMade;
 };
