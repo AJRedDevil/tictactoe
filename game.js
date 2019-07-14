@@ -89,11 +89,11 @@ const checkForDraw = () => {
 };
 
 // Game Logic
-const chooseSquare = () => {
+const chooseSquare = event => {
   difficulty = document.getElementById('difficulty').value;
   if (!gameOver) {
     setMessageBox('Pick a square!');
-    const id = this.getAttribute('id');
+    id = event.target.id;
     const square = document.getElementById(id);
     if (squareIsOpen(square)) {
       square.innerHTML = 'X';
