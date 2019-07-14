@@ -19,6 +19,16 @@ const setMessageBox = caption => {
   messageBox.innerHTML = caption;
 };
 
+const resetGame = () => {
+  gameOver = false;
+  setMessageBox('Pick a square!');
+  for (let id = 0; id < squareCount; id++) {
+    const square = document.getElementById(id);
+    square.innerHTML = '';
+    square.style.backgroundColor = 'rgb(102,178,255)';
+  }
+};
+
 const findClaimedSquares = marker => {
   const claimedSquares = [];
   let value;
