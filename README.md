@@ -1,6 +1,10 @@
-# tictactoe
+# Tic Tac Toe
 
 > Simple tic-tac-toe game.
+
+## Demo
+
+[Demo](https://ajreddevil-tic-tac-toe.netlify.com/)
 
 ## Description
 
