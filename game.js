@@ -77,6 +77,11 @@ const makeMoveAtFirstAvailableSquare = () => {
 const squareIsOpen = square =>
   square.innerHTML !== 'X' && square.innerHTML !== 'O';
 
+const highlightWinningSquares = (winningSquares, color) =>
+  winningSquares.forEach(
+    id => (document.getElementById(id).style.backgroundColor = color)
+  );
+
 const checkForDraw = () => {
   let draw = true;
   for (let id = 0; id < squareCount; id++) {
