@@ -14,7 +14,10 @@ const squares = document.getElementsByClassName('square');
 let difficulty = 'beginner';
 let gameOver = false;
 
-const setMessageBox = caption => {};
+const setMessageBox = caption => {
+  const messageBox = document.getElementById('messageBox');
+  messageBox.innerHTML = caption;
+};
 
 const checkForWinCondition = marker => {};
 
